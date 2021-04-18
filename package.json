@@ -1,0 +1,21 @@
+{
+  "name": "rtk-query-codemod",
+  "version": "1.0.0",
+  "description": "Experimental codemod for migrating from RTK Query 0.2 -> 0.3",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "transform": "./node_modules/.bin/jscodeshift -t ./transformers/v2-v3.js --extensions=ts --parser=ts ./transformers/mocks/api.input.ts --print --dry"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "jscodeshift": "^0.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "prettier": "^2.2.1"
+  }
+}
